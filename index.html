@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Стар коммэн</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<!--[if IE 8]>
+		<script src="./js/ie8.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div>
+			<div class="logo">
+				<img src="./img/logo.png" width="210" height="102" alt="">
+				<p>крупозавод с 1992 года</p>
+			</div>
+			<ul class="contacts">
+				<li>
+					<h4><a href="tel:+73852314576">+7 (3852) 31-45-76</a></h4>
+				</li>
+				<li>
+					<p><a href="mailto:info@altai-krupa.ru">info@altai-krupa.ru</a></p>
+				</li>
+			</ul>
+			<nav>
+				<ul>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Продукция</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#" class="order">Заказ</a></li>
+				</ul>
+			</nav>
+			<span class="menu-open"></span>
+		</div>
+	</header>
+	<div class="intro-b">
+		<div>
+			<h2>Верность традициям<br> во благо качеству</h2>
+			<p>Мы гордимся тем, что со временем у нас меняется<br> многое, но качество остается неизменным </p>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="products-i">
+			<div>
+				<h2>Наша продукция</h2>
+				<ul>
+					<li>
+						<div>
+							<img src="./pic/p-i-1.jpg" width="220" height="220" alt="">
+						</div>
+						<h3><a href="#">Гречневая крупа, продел</a></h3>
+						<p>Гречневая крупа выработана из пропаренного зерна гречихи</p>
+						<h5>45 руб/кг</h5>
+					</li>
+					<li>
+						<div>
+							<img src="./pic/p-i-2.jpg" width="220" height="220" alt="">
+						</div>
+						<h3><a href="#">Горох колотый, целый</a></h3>
+						<p>Шелушеный целый горох с сохранением всех свойств</p>
+						<h5>25 руб/кг</h5>
+					</li>
+				</ul>
+				<button data-open="price-list">Запросить прайс-лист</button>
+				<a href="#" class="all"><span>Вся продукция компании</span></a>
+			</div>
+		</div>
+		<div class="advantages-i">
+			<h2>Нашу компанию ценят<br> в первую очередь за продукцию</h2>
+			<h6>Мы это знаем и дорожим своей репутацией.<br>
+			Качество нашей продукции обусловлено несколькими факторами, о которых не стоит забывать.</h6>
+			<ul class="list">
+				<li>
+					<h4>Алтайский край -<br> экологически<br> чистый регион</h4>
+					<div>
+						<img src="./pic/a-i-1.jpg" width="520" height="320" alt="">
+					</div>
+				</li>
+				<li>
+					<h4>Высокотехнологичное<br> оборудование<br> завода</h4>
+					<div>
+						<img src="./pic/a-i-2.jpg" width="520" height="320" alt="">
+					</div>
+				</li>
+				<li>
+					<h4>25 лет<br> эффективного<br> развития завода</h4>
+					<div>
+						<img src="./pic/a-i-3.jpg" width="520" height="320" alt="">
+					</div>
+				</li>
+				<li>
+					<h4>Внутренняя<br> система контроля<br> качества</h4>
+					<div>
+						<img src="./pic/a-i-4.jpg" width="520" height="320" alt="">
+					</div>
+				</li>
+			</ul>
+			<ul class="stat">
+				<li>
+					<h4>20</h4>
+					<p>тыс. тонн<br> ежегодно<br> поставляются</p>
+				</li>
+				<li>
+					<h4>12</h4>
+					<p>стран-импортеров<br> нашей продукции</p>
+				</li>
+			</ul>
+		</div>
+		<div class="geography-i">
+			<h2>География поставок</h2>
+			<div class="core">
+				<div id="map"></div>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjDfXQYwSAXEgkDg5L3_1Gutu0DFD0Ytw"></script>
+				<script>
+					var customMap = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+					function initialize() {
+						var mainIcon = './img/pin-icon.png';
+						var hoverIcon = './img/pin-hover-icon.png';
+						var map = document.getElementById('map');
+						var mapOptions = {
+							center: new google.maps.LatLng(53.384834, 83.735766),
+							zoom: 3,
+							disableDefaultUI: true,
+							scrollwheel: false,
+						}
+						var map = new google.maps.Map(map, mapOptions);
+						map.setOptions({styles: customMap});
+						var set = new google.maps.LatLng(53.384834, 83.735766);
+						var marker = new google.maps.Marker({
+							position: set,
+							map: map,
+							icon: mainIcon
+						});
+						google.maps.event.addListener(marker, 'mouseover', function() {
+							marker.setIcon(hoverIcon);
+						});
+						google.maps.event.addListener(marker, 'mouseout', function() {
+							marker.setIcon(mainIcon);
+						});
+						$('.geography-i .expand').on('click', function(e) {
+							e.preventDefault();
+							if ( !$(this).parents().hasClass('opened') ) {
+								$(this).parent().addClass('opened');
+								setTimeout(function() {
+									map.set('disableDefaultUI', false);
+									map.set('scrollwheel', true);
+								}, 300);
+							} else {
+								$(this).parent().removeClass('opened');
+								map.set('disableDefaultUI', true);
+								map.set('scrollwheel', false);
+							}
+						});
+					}
+					google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<span class="expand">развернуть карту</span>
+		</div>
+		<div class="director-i">
+			<div class="quote">
+				<h2>«Развитие сельского хозяйства и производство экологически чистого продукта»</h2>
+				<p>Так всегда звучала миссия нашей компании, так звучать она и будет. Мы создавались, как небольшая семейная компания с ценностями, близкими семейным. В этом ключе мы и развиваемся, не изменяя своим принципам</p>
+				<button class="blue">История компании</button>
+			</div>
+			<div class="photo">
+				<img src="./pic/d.jpg" width="660" height="440" alt="">
+			</div>
+			<div class="name">
+				<h4>Старовойтов<br> Игорь Николаевич</h4>
+				<p>генеральный директор завода «Стар Коммэн»</p>
+			</div>
+		</div>
+		<div class="clients-i">
+			<h2>Поэтому с нами работают</h2>
+			<div class="core">
+				<div class="item">
+					<div>
+						<img src="./pic/cl-1.png" width="210" height="43" alt="">
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<img src="./pic/cl-2.png" width="210" height="98" alt="">
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<img src="./pic/cl-3.png" width="136" height="100" alt="">
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<img src="./pic/cl-4.png" width="185" height="100" alt="">
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<img src="./pic/cl-5.png" width="210" height="44" alt="">
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<img src="./pic/cl-6.png" width="105" height="81" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li>
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Полезная информация</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Гречневая крупа</a></li>
+						<li><a href="#">Горох</a></li>
+						<li><a href="#">Овсяные хлопья</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Пшеничная крупа</a></li>
+						<li><a href="#">Ячменная крупа</a></li>
+						<li><a href="#">Пшено</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="copy">
+				<p>© 1992-2016. «Стар Коммэн»</p>
+				<p>Оптовые поставки круп</p>
+			</div>
+			<div class="author">
+				<a href="#"><img src="./img/ps-logo.png" width="48" height="48" alt=""></a>
+				<p>Разработка сайта:</p>
+				<p><a href="#">Полезные системы</a></p>
+			</div>
+		</div>
+	</footer>
+	<div class="fade"></div>
+	<div class="modal" data-target="price-list">
+		<span class="close"></span>
+		<h3>Заказать прайс-лист</h3>
+		<div class="form-e">
+			<div class="item">
+				<label><span>Ваше имя</span></label>
+				<input type="text">
+			</div>
+			<div class="item">
+				<label><span>Ваш e-mail</span></label>
+				<input type="text">
+			</div>
+			<div class="item">
+				<label><span>Ваш телефон</span></label>
+				<input type="text">
+			</div>
+			<button data-open="success">Запросить прайс-лист</button>
+		</div>
+	</div>
+	<div class="modal" data-target="success">
+		<span class="close"></span>
+		<h3>Ваш запрос успешно отправлен</h3>
+		<p>Проверьте Вашу почту, возможно наш прайс-лист уже доставлен.</p>
+		<p>Если этого не произошло, пожалуйста, свяжитесь с нашим менеджером по телефону: +7 (3852) 31-45-76</p>
+	</div>
+	<div class="menu-mini-show">
+		<div class="main">
+			<ul>
+				<li><a href="#">О компании</a></li>
+				<li class="open-sub"><a href="#">Продукция</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Полезная информация</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Заказ</a></li>
+			</ul>
+		</div>
+		<div class="sub">
+			<h5>Продукция</h5>
+			<ul>
+				<li><a href="#">Гречневая крупа, продел</a></li>
+				<li><a href="#">Горох колотый, целый</a></li>
+				<li><a href="#">Крупа перловая, ячневая</a></li>
+				<li><a href="#">Пшено</a></li>
+				<li><a href="#">Овсяная крупа, геркулес</a></li>
+				<li><a href="#">Крупа пшеничная, полтавская</a></li>
+				<li><a href="#">«Артек»</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="./js/libs.js"></script>
+	<script src="./js/scripts.js"></script>
+</body>
+</html>

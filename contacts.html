@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Стар коммэн</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<!--[if IE 8]>
+		<script src="./js/ie8.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div>
+			<div class="logo">
+				<a href="#">
+					<img src="./img/logo.png" width="210" height="102" alt="">
+					<p>крупозавод с 1992 года</p>
+				</a>
+			</div>
+			<ul class="contacts">
+				<li>
+					<h4><a href="tel:+73852314576">+7 (3852) 31-45-76</a></h4>
+				</li>
+				<li>
+					<p><a href="mailto:info@altai-krupa.ru">info@altai-krupa.ru</a></p>
+				</li>
+			</ul>
+			<nav>
+				<ul>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Продукция</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li class="active"><a href="#">Контакты</a></li>
+					<li><a href="#" class="order">Заказ</a></li>
+				</ul>
+			</nav>
+			<span class="menu-open"></span>
+		</div>
+	</header>
+	<div class="wrapper">
+		<div class="title-e">
+			<div class="core">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+				</ul>
+				<h1>Контакты</h1>
+			</div>
+			<div class="bg">
+				<img src="./pic/contacts-title.jpg" width="1920" height="220" class="img-bg top" alt="">
+			</div>
+		</div>
+		<div class="contacts-b">
+			<ul class="general">
+				<li>
+					<p>Адрес:</p>
+					<h5>г. Барнаул,<br> ул. Трактовая 74</h5>
+				</li>
+				<li>
+					<p>Телефон:</p>
+					<h5><a href="tel:+73852314576">+7 (3852) 31-45-76</a></h5>
+				</li>
+				<li>
+					<p>E-mail:</p>
+					<h5><a href="mailto:info@altai-krupa.ru">info@altai-krupa.ru</a></h5>
+				</li>
+			</ul>
+			<div id="map">
+			</div>
+			    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				<script type="text/javascript">
+					ymaps.ready(init);
+					var map;
+					function init(){     
+						map = new ymaps.Map('map', {
+							center: [53.32164657115203,83.6218609999999],
+							zoom: 16,
+							controls: ['zoomControl']
+						});
+						place = new ymaps.Placemark(map.getCenter(), {}, {
+							iconLayout: 'default#image',
+							iconImageHref: './img/contacts-pin-icon.png',
+							iconImageSize: [61, 60],
+							iconImageOffset: [-30, -60]
+						});
+						map.geoObjects.add(place);
+					}
+				</script>
+			<div class="form-e">
+				<p>Если у Вас есть какие-то вопросы и Вам удобнее задать их через сайт, то наша форма обратной связи в этом поможет, а мы всегда с радостью ответим на все Ваши вопросы</p>
+				<div class="item">
+					<label><span>Ваше имя</span></label>
+					<input type="text">
+				</div>
+				<div class="item">
+					<label><span>Электронная почта</span></label>
+					<input type="text">
+				</div>
+				<div class="item">
+					<label><span>Текст сообщение</span></label>
+					<textarea cols="80" rows="6"></textarea>
+				</div>
+				<button>Отправить</button>
+			</div>
+			<div class="download">
+				<p>Для подготовки необходимой документации Вам могут понадобиться:</p>
+				<ul>
+					<li><a href="#">Реквизиты<br> компании</a> <span>(.doc, 12 Kb)</span></li>
+					<li><a href="#">Бланк заказа<br> продукции</a> <span>(.xls, 120 Kb)</span></li>
+					<li><a href="#">Типовой договор<br> на поставку</a> <span>(.xls, 120 Kb)</span></li>
+				</ul>
+			</div>
+			<div class="job">
+				<p>Если Вы хотите у нас работать, то свое резюме присылайте на e-mail нашего кадровика: <a href="#">job@altai-krupa.ru</a></p>
+				<p>Связаться с нашим кадровиком можно по телефону: <strong>+7 (3852) 31-45-77</strong></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li>
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Полезная информация</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Гречневая крупа</a></li>
+						<li><a href="#">Горох</a></li>
+						<li><a href="#">Овсяные хлопья</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Пшеничная крупа</a></li>
+						<li><a href="#">Ячменная крупа</a></li>
+						<li><a href="#">Пшено</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="copy">
+				<p>© 1992-2016. «Стар Коммэн»</p>
+				<p>Оптовые поставки круп</p>
+			</div>
+			<div class="author">
+				<a href="#"><img src="./img/ps-logo.png" width="48" height="48" alt=""></a>
+				<p>Разработка сайта:</p>
+				<p><a href="#">Полезные системы</a></p>
+			</div>
+		</div>
+	</footer>
+	<div class="menu-mini-show">
+		<div class="main">
+			<ul>
+				<li><a href="#">О компании</a></li>
+				<li class="open-sub"><a href="#">Продукция</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Полезная информация</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Заказ</a></li>
+			</ul>
+		</div>
+		<div class="sub">
+			<h5>Продукция</h5>
+			<ul>
+				<li><a href="#">Гречневая крупа, продел</a></li>
+				<li><a href="#">Горох колотый, целый</a></li>
+				<li><a href="#">Крупа перловая, ячневая</a></li>
+				<li><a href="#">Пшено</a></li>
+				<li><a href="#">Овсяная крупа, геркулес</a></li>
+				<li><a href="#">Крупа пшеничная, полтавская</a></li>
+				<li><a href="#">«Артек»</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="./js/libs.js"></script>
+	<script src="./js/scripts.js"></script>
+</body>
+</html>
