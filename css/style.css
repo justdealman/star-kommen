@@ -46,7 +46,6 @@ html * {
 	max-height:1000000px;
 }
 body {
-	min-width:320px;
 	width:100%;
 	height:100%;
 	color:#494643;
@@ -395,6 +394,7 @@ header .contacts li h4 {
 	font-size:20px;
 	line-height:28px;
 	font-weight:normal;
+	white-space:nowrap;
 	margin:-2px 0;
 }
 header .contacts li h4 a {
@@ -1031,29 +1031,41 @@ footer .author img {
 .form-e button {
 	margin:0 0 20px;
 }
-.form-e .add-group {
+.form-e .add-group, .form-e .remove-group {
 	display:block;
 	color:#8c973f;
 	font-size:16px;
 	line-height:26px;
 	font-weight:500;
-	padding:7px 9px 9px;
 	text-align:center;
 	cursor:pointer;
+	padding:7px 9px 9px;
+	margin:0 0 20px;
 	border:1px dashed #d1d1d1;
 }
-.form-e .add-group:before {
+.form-e .add-group:before, .form-e .remove-group:before {
 	content:'';
 	display:inline-block;
 	width:22px;
 	height:22px;
 	vertical-align:top;
 	margin:3px 10px 0 0;
-	background:url('../img/add-icon.png') no-repeat center center;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-image:url('../img/add-remove-icon.png');
 }
-.form-e .add-group:hover {
+.form-e .add-group:before {
+	background-position:0 0;
+}
+.form-e .remove-group:before {
+	background-position:0 -22px;
+}
+.form-e .add-group:hover, .form-e .remove-group:hover {
 	padding:6px 8px 8px;
 	border:2px solid #8c973f;
+}
+.form-e .remove-group {
+	display:none;
 }
 .warning-wrap {
 	position:relative;
@@ -2801,6 +2813,9 @@ ol ul li:before {
 	}
 }
 @media all and (max-width:999px) {
+	body.scroll-hide {
+		overflow:hidden;
+	}
 	header {
 		border-bottom:2px solid transparent;
 		-webkit-transition:background 0.1s linear, border-bottom-color 0.1s linear;
@@ -2990,6 +3005,9 @@ ol ul li:before {
 		transform:scale(0.86);
 		-webkit-transform-origin:center center;
 		transform-origin:center center;
+	}
+	.clients-i .core .item div img {
+		opacity:1;
 	}
 	footer {
 		margin-top:-269px;
@@ -3346,7 +3364,7 @@ ol ul li:before {
 		top:0;
 		width:150px;
 		height:16px;
-		background:url('../img/logo.png') no-repeat right -7px;
+		background:url('../img/logo.svg') no-repeat right -7px;
 	}
 	header .logo img {
 		display:none;
@@ -3375,12 +3393,7 @@ ol ul li:before {
 		background:url('../img/intro-bg-760.jpg') no-repeat center 12%;
 		background-size:cover;
 	}
-	.intro-b:after {
-		content:'';
-		position:absolute;
-		left:0;
-		top:0;
-		width:100%;
+	.intro-b:before {
 		height:100%;
 		background:rgba(0,0,0,0.2);
 	}
@@ -4262,14 +4275,15 @@ ol ul li:before {
 	position:fixed;
 	left:0;
 	top:90px;
-	z-index:200;
+	z-index:49;
 	width:100%;
 	height:calc(100% - 90px);
+	margin-top:-2px;
 	background:#ffffff;
 }
 .menu-mini-show > div {
 	text-align:center;
-	padding:29px 10px;
+	padding:31px 10px 29px;
 }
 .menu-mini-show .sub {
 	border-top:1px solid #d1d1d0;

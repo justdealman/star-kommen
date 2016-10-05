@@ -14,7 +14,7 @@
 	<header>
 		<div>
 			<div class="logo">
-				<img src="./img/logo.png" width="210" height="102" alt="">
+				<img src="./img/logo.svg" width="210" height="102" alt="">
 				<p>крупозавод с 1992 года</p>
 			</div>
 			<ul class="contacts">
@@ -145,11 +145,13 @@
 							e.preventDefault();
 							if ( !$(this).parents().hasClass('opened') ) {
 								$(this).parent().addClass('opened');
+								$(this).text('свернуть карту');
 								setTimeout(function() {
 									map.set('disableDefaultUI', false);
 									map.set('scrollwheel', true);
 								}, 300);
 							} else {
+								$(this).text('развернуть карту');
 								$(this).parent().removeClass('opened');
 								map.set('disableDefaultUI', true);
 								map.set('scrollwheel', false);
@@ -294,8 +296,7 @@
 				<li><a href="#">Крупа перловая, ячневая</a></li>
 				<li><a href="#">Пшено</a></li>
 				<li><a href="#">Овсяная крупа, геркулес</a></li>
-				<li><a href="#">Крупа пшеничная, полтавская</a></li>
-				<li><a href="#">«Артек»</a></li>
+				<li><a href="#">Крупа пшеничная, полтавская «Артек»</a></li>
 			</ul>
 		</div>
 	</div>

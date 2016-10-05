@@ -47,16 +47,25 @@ $(function() {
 			}
 		});
 	});
-	$('body').delegate('.warning-wrap .icon', 'mouseenter', function() {
+	if ( !Modernizr.touchevents ) {
+		var openErrorEvent = 'mouseenter';
+		var closeErrorEvent = 'mouseleave';
+	} else {
+		var openErrorEvent = 'click';
+		var closeErrorEvent = 'click';
+	}
+	$('body').delegate('.warning-wrap .icon:not(.opened)', openErrorEvent, function() {
 		var t = $(this).siblings('.text');
+		$(this).addClass('opened');
 		t.stop().animate({
 			'width': '100%',
 		}, 300, function() {
 			$(this).find('em').show();
 		});
 	});
-	$('body').delegate('.warning-wrap .icon', 'mouseleave', function() {
+	$('body').delegate('.warning-wrap .icon.opened', closeErrorEvent, function() {
 		var t = $(this).siblings('.text');
+		$(this).removeClass('opened');
 		t.find('em').hide();
 		t.stop().animate({
 			'width': '0',
@@ -263,21 +272,32 @@ $(function() {
 	$('.form-e .add-group').on('click', function(e) {
 		e.preventDefault();
 		var element = 
-		'<div class="item">\
-			<label><span>Вид продукции</span></label>\
-			<select>\
-				<option selected disabled>Выберите из списка</option>\
-				<option>Вид 1</option>\
-				<option>Вид 2</option>\
-			</select>\
-		</div>\
-		<div class="item">\
-			<label>Объем заказа</label>\
-			<span class="inline number-2"><input type="text"></span>\
-			<span class="sign">тонн</span>\
+		'<div class="type">\
+			<div class="item">\
+				<label><span>Вид продукции</span></label>\
+				<select>\
+					<option selected disabled>Выберите из списка</option>\
+					<option>Вид 1</option>\
+					<option>Вид 2</option>\
+				</select>\
+			</div>\
+			<div class="item">\
+				<label>Объем заказа</label>\
+				<span class="inline number-2"><input type="text"></span>\
+				<span class="sign">тонн</span>\
+			</div>\
 		</div>'
-		$(this).parent().before(element);
+		$(this).siblings('.remove-group').css({
+			'display': 'block'
+		}).parent().before(element);
 		customSelect();
+	});
+	$('.form-e .remove-group').on('click', function(e) {
+		e.preventDefault();
+		$(this).parent().prev('.type').remove();
+		if ( $(this).parents('.group').find('.type').size() == 1 ) {
+			$(this).hide();
+		}
 	});
 	$('.card-full .characteristics .expand span').on('click', function(e) {
 		e.preventDefault();
@@ -308,21 +328,31 @@ $(function() {
 		var m = $('.menu-mini-show');
 		if ( m.is(':hidden') ) {
 			m.stop().fadeIn(100).css({
-				'top': $('header').outerHeight()+'px',
-				'height': $(window).height()-$('header').outerHeight()+'px'
+				'top': $('header').outerHeight()+2+'px',
+				'height': $(window).height()-$('header').outerHeight()+2+'px'
 			});
 			$('header').addClass('dropped');
+			$('body').addClass('scroll-hide');
 		} else {
-			m.stop().fadeOut(100);
 			$('header').removeClass('dropped');
+			$('body').removeClass('scroll-hide');
+			m.stop().fadeOut(100);
 		}
 		$(this).toggleClass('active');
 	});
 	$('html, body').on('click', function() {
 		$('.menu-mini-show').stop().fadeOut(100);
+		$('body').removeClass('scroll-hide');
 		$('.menu-open').removeClass('active');
 	});
 	$('.menu-mini-show, .menu-open').click(function(e)  {
 		e.stopPropagation();
+	});
+	$(window).on('scroll resize', function() {
+		if ( $('.menu-mini-show').is(':visible') ) {
+			$('.menu-mini-show').css({
+				'height': $(window).height()-$('header').outerHeight()+2+'px'
+			});
+		}
 	});
 });

@@ -15,7 +15,7 @@
 		<div>
 			<div class="logo">
 				<a href="#">
-					<img src="./img/logo.png" width="210" height="102" alt="">
+					<img src="./img/logo.svg" width="210" height="102" alt="">
 					<p>крупозавод с 1992 года</p>
 				</a>
 			</div>
@@ -57,20 +57,23 @@
 			<div class="form-e">
 				<div class="group">
 					<h3>Содержание заказа</h3>
-					<div class="item">
-						<label><span>Вид продукции</span></label>
-						<select>
-							<option selected disabled>Выберите из списка</option>
-							<option>Вид 1</option>
-							<option>Вид 2</option>
-						</select>
+					<div class="type">
+						<div class="item">
+							<label><span>Вид продукции</span></label>
+							<select>
+								<option selected disabled>Выберите из списка</option>
+								<option>Вид 1</option>
+								<option>Вид 2</option>
+							</select>
+						</div>
+						<div class="item">
+							<label>Объем заказа</label>
+							<span class="inline number-2"><input type="text"></span>
+							<span class="sign">тонн</span>
+						</div>
 					</div>
 					<div class="item">
-						<label>Объем заказа</label>
-						<span class="inline number-2"><input type="text"></span>
-						<span class="sign">тонн</span>
-					</div>
-					<div class="item">
+						<span class="remove-group">Удалить вид продукции</span>
 						<span class="add-group">Добавить вид продукции</span>
 					</div>
 				</div>
@@ -173,8 +176,7 @@
 				<li><a href="#">Крупа перловая, ячневая</a></li>
 				<li><a href="#">Пшено</a></li>
 				<li><a href="#">Овсяная крупа, геркулес</a></li>
-				<li><a href="#">Крупа пшеничная, полтавская</a></li>
-				<li><a href="#">«Артек»</a></li>
+				<li><a href="#">Крупа пшеничная, полтавская «Артек»</a></li>
 			</ul>
 		</div>
 	</div>
